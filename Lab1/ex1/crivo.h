@@ -1,7 +1,7 @@
 #ifndef CRIVO_H
 #define CRIVO_H
 
-typedef char* data_type;
+typedef char data_type;
 
 typedef struct
 {
@@ -21,7 +21,7 @@ void marcaNumero(Vector * crivo, int n);
 
 int posNumero(Vector * crivo, int n);
 
-int achaNumero(Vector * crivo, int n);
+int achaNumero(Vector * crivo, int start,int n);
 
 void imprimePrimos(Vector * crivo);
 

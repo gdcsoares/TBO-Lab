@@ -32,8 +32,7 @@ void vector_push_back(Vector *v, data_type val){
 
 
 void marcaNumero(Vector * crivo, int n){
-
-    strcpy(crivo->data[n],"false");
+    crivo->data[n]='f';
 }
 
 int posNumero(Vector* crivo, int n){
@@ -44,14 +43,20 @@ int posNumero(Vector* crivo, int n){
     }
 }
 
-int achaNumero(Vector * crivo, int n){
-    return crivo->data[n];
+int achaNumero(Vector * crivo, int start, int n){
+    for(int i = start; i <= n; i++){
+        if(crivo->data[i]=='t'){
+            return i;
+        }
+    }
+    return 0;
 }
 
 void imprimePrimos(Vector * crivo){
-    for (int i=2; i < crivo->size;i++){
-        if(strcmp(crivo->data[i],"true")==0){
-            printf("%s",i);
+    for (int i=2; i < crivo->size; i++){
+        if(crivo->data[i]=='t'){
+            printf("%d ", i);
         }
     }
+    printf("\n");
 }
