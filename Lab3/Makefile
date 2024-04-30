@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-lm 
 DEPS= main.h item.h
-OBJ=main.o selection_sort.o
+OBJ=main.o bubble_sort.o
 
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
